@@ -90,6 +90,7 @@ class Comment(db.Model):
     parent_post = relationship("BlogPost", back_populates="comments")
 
 
+# Regenerate db
 # db.create_all()
 
 
