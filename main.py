@@ -26,7 +26,8 @@ Bootstrap(app)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 # Use DATABASE_URL if provided (i.e. on Heroku); if none, use sqlite
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///blog.db")
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1", "sqlite:///blog.db")
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1", "sqlite:///blog.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://' + os.environ.get("POSTGRES_INFO") + '/blog_postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
