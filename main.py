@@ -92,7 +92,7 @@ class Comment(db.Model):
 
 
 # Regenerate db
-db.create_all()
+# db.create_all()
 
 
 # Define admin-only decorator
